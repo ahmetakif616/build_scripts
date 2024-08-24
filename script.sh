@@ -28,13 +28,6 @@ git cherry-pick 198966577ace63573e5be49e03a2e59e32997054
 cd ../..
 echo "===== Cherry-picking Success ====="
 
-# cherry-pick
-cd build/make 
-git fetch https://github.com/LineageOS/android_build refs/changes/82/390682/2 
-git cherry-pick FETCH_HEAD
-cd ../..
-echo "======= cherry-pick Done ======"
-
 # remove face unlock 
 rm -rf packages/apps/FaceUnlock
 
