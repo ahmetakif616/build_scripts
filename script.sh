@@ -20,6 +20,14 @@ echo "============="
 echo "Sync success"
 echo "============="
 
+# Git cherry-pick
+cd vendor/lineage
+git remote add los https://github.com/LineageOS/android_vendor_lineage
+git fetch los
+git cherry-pick 198966577ace63573e5be49e03a2e59e32997054
+cd ../..
+echo "===== Cherry-picking Success ====="
+
 # cherry-pick
 cd build/make 
 git fetch https://github.com/LineageOS/android_build refs/changes/82/390682/2 
@@ -31,7 +39,7 @@ echo "======= cherry-pick Done ======"
 rm -rf packages/apps/FaceUnlock
 
 # Export
-export BUILD_USERNAME=PFARHAN
+export BUILD_USERNAME=FARHAN
 export BUILD_HOSTNAME=crave
 echo "======= Export Done ======"
 
@@ -40,6 +48,6 @@ source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch infinity_Mi439_4_19-ap2a-userdebug 
+lunch infinity_Mi439_4_19-userdebug 
 make installclean
 mka bacon
