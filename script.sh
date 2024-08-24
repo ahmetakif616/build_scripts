@@ -48,6 +48,6 @@ source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch infinity_Mi439_4_19-userdebug 
+lunch infinity_Mi439_4_19-ap2a-userdebug 
 make installclean
 mka bacon
