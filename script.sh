@@ -38,6 +38,7 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 # Lunch
-pixelstar_Mi439_4_19-userdebug
-
+pixelstar_Mi439_4_19-ap2a-userdebug
+make installclean
+mka bacon
 
