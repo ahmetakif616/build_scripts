@@ -2,43 +2,41 @@
 
 rm -rf .repo/local_manifests/
 
-repo init --depth=1 -u https://github.com/ProjectSakura/android.git -b 14 --git-lfs
+# repo init rom
+repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b QPR3 -g default,-mips,-darwin,-notdefault
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/Gtajisan/local_manifests -b Project-Sakura .repo/local_manifests
+git clone https://github.com/Gtajisan/local_manifests -b infinity-x .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
-
 # Sync
 /opt/crave/resync.sh
 echo "============="
 echo "Sync success"
 echo "============="
 
+# Git cherry-pick
+cd vendor/lineage
+git remote add los https://github.com/LineageOS/android_vendor_lineage
+git fetch los
+git cherry-pick 198966577ace63573e5be49e03a2e59e32997054
+cd ../..
+echo "===== Cherry-picking Success ====="
+
 # Export
-export BUILD_USERNAME=FARHAN
+export BUILD_USERNAME=FARHAN_UN
 export BUILD_HOSTNAME=crave
 echo "======= Export Done ======"
 
-# Signing credit tavukkdoner
-curl -O https://raw.githubusercontent.com/Gtajisan/crDroid-build-signed-script/crdroid/create-signed-env.sh
-chmod +x create-signed-env.sh
-./create-signed-env.sh
-
-#Cherry-pick
-cd vendor/addons
-git fetch 14.0 --unshallow
-git fetch https://github.com/RisingTechOSS/android_vendor_addons.git fourteen
-git cherry-pick dbd659e
-cd ../..
 # Set up build environment
-source build/envsetup.sh
+. build/envsetup.sh 
 echo "====== Envsetup Done ======="
 
-lunch lineage_Mi439_4_19-ap2a-userdebug
+# Lunch
+lunch infinity_Mi439_4_19-userdebug || lunch infinity_Mi439_4_19-ap1a-userdebug 
 make installclean
 mka bacon
