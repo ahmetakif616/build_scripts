@@ -42,5 +42,9 @@ echo "====== Envsetup Done ======="
 
 # Lunch
 lunch infinity_Mi439_4_19-userdebug || lunch infinity_Mi439_4_19-ap1a-userdebug 
+
+# make install
 make installclean
+
+# make bacon
 mka bacon
