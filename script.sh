@@ -41,6 +41,7 @@ source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
+. build/envsetup.sh
 lunch infinity_Mi439_4_19-userdebug || lunch infinity_Mi439_4_19-ap1a-userdebug 
 
 # make install
