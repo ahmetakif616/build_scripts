@@ -28,6 +28,10 @@ git cherry-pick 198966577ace63573e5be49e03a2e59e32997054
 cd ../..
 echo "===== Cherry-picking Success ====="
 
+# Private keys
+git clone https://github.com/Gtajisan/vendor_lineage-priv_keys.git vendor/lineage-priv/keys
+echo "===== cp clone done ====="
+
 # remove face unlock 
 rm -rf packages/apps/FaceUnlock
 
@@ -42,7 +46,7 @@ echo "====== Envsetup Done ======="
 
 # Lunch
 . build/envsetup.sh
-lunch infinity_Mi439_4_19-userdebug || lunch infinity_Mi439_4_19-ap1a-userdebug 
+lunch infinity_Mi439_4_19-ap2a-userdebug || lunch infinity_Mi439_4_19-ap1a-userdebug 
 
 # make install
 make installclean
