@@ -47,10 +47,9 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 # Lunch
-pixelstar_Mi439_4_19-ap2a-userdebug
-echo "====== luda Done ======="
+lunch pixelstar_Mi439_4_19-ap2a-userdebug
+echo "====== lunch Done ======="
 
 # installclean
 make installclean
 mka bacon
-
