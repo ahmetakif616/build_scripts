@@ -20,6 +20,10 @@ echo "============="
 echo "Sync success"
 echo "============="
 
+# Use AOSP clang for no errors thanks trijal kido.
+rm -r prebuilts/clang/host/linux-x86
+git clone https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 prebuilts/clang/host/linux-x86
+
 # Git cherry-pick
 cd vendor/lineage
 git remote add los https://github.com/LineageOS/android_vendor_lineage
@@ -39,6 +43,9 @@ echo "====== Envsetup Done ======="
 
 # Lunch
 pixelstar_Mi439_4_19-ap2a-userdebug
+echo "====== luda Done ======="
+
+# installclean
 make installclean
 mka bacon
 
