@@ -9,7 +9,7 @@ echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/Gtajisan/local_manifests -b infinity-x .repo/local_manifests
+git clone https://github.com/Gtajisan/local_manifests -b Los-21 .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -46,7 +46,7 @@ echo "====== Envsetup Done ======="
 
 # Lunch
 . build/envsetup.sh
-lunch infinity_Mi439_4_19-ap2a-userdebug || lunch infinity_Mi439_4_19-ap1a-userdebug 
+lunch infinity_Mi439-ap2a-userdebug || lunch infinity_Mi439-ap1a-userdebug 
 
 # make install
 make installclean
