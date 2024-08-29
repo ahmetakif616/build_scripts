@@ -39,8 +39,8 @@ echo "======= Export Done ======"
 
 # Lunch  
 . build/envsetup.sh
-brunch Mi439_4_19 
-brunch Mi439_4_19 userdebug
-
+lunch lineage_Mi439_4_19-ap2a-userdebug
+make installclean
+mka bacon
 
 
