@@ -29,8 +29,8 @@ cd ../..
 echo "===== Cherry-picking Success ====="
 
 # Private keys
-git clone https://github.com/Gtajisan/vendor_lineage-priv_keys.git vendor/lineage-priv/keys
-echo "===== cp clone done ====="
+#git clone https://github.com/Gtajisan/vendor_lineage-priv_keys.git vendor/lineage-priv/keys
+#echo "===== cp clone done ====="
 
 # Export
 export BUILD_USERNAME=FARHAN_UN
