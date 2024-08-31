@@ -20,16 +20,10 @@ echo "============="
 echo "Sync success"
 echo "============="
 
-#Cherry-pick
-cd vendor/addons
-git fetch crdroid --unshallow
-git fetch https://github.com/RisingTechOSS/android_vendor_addons fourteen
-git cherry-pick dbd659e
-cd ../..
 
-# Private keys
-#git clone https://github.com/Gtajisan/vendor_lineage-priv_keys.git vendor/lineage-priv/keys
-#echo "===== cp clone done ====="
+Private keys
+git clone https://github.com/Gtajisan/vendor_lineage-priv_keys.git vendor/lineage-priv/keys
+echo "===== cp clone done ====="
 
 # Export
 export BUILD_USERNAME=FARHAN_UN
@@ -38,8 +32,7 @@ echo "======= Export Done ======"
 
 # Lunch  
 . build/envsetup.sh
-lunch lineage_Mi439_4_19-ap2a-userdebug
-make installclean
-mka bacon
+brunch Mi439 userdebug
+
 
 
