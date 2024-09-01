@@ -34,7 +34,7 @@ echo "====== Envsetup Done ======="
 
 # Lunch
 . build/envsetup.sh
-lunch infinity_Mi439-ap2a-userdebug
+lunch infinity_mi439-userdebug
 
 # make install
 make installclean
