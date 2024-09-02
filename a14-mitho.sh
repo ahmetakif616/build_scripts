@@ -3,7 +3,7 @@
 rm -rf .repo/local_manifests/
 
 # repo init rom
-repo init --depth=1 -u https://github.com/AfterlifeOS/android_manifest.git -b 14 --git-lfs
+repo init --depth=1 --no-repo-verify -u https://github.com/AfterLifePrjkt13/android_manifest.git -b 4.0 -g default,-mips,-darwin,-notdefault
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -39,5 +39,5 @@ echo "====== Envsetup Done ======="
 
 # lunch 
 . build/envsetup.sh
-goafterlife Mi439_4_19
-goafterlife Mi439_4_19 userdebug
+lunch afterlife_mi439-userdebug
+m afterlife 
