@@ -40,4 +40,7 @@ echo "====== Envsetup Done ======="
 # lunch 
 . build/envsetup.sh
 lunch afterlife_mi439-userdebug
+make installclean
 m afterlife 
+# maybe 
+mka bacon
