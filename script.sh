@@ -9,7 +9,7 @@ echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/Gtajisan/local_manifests -b rise-b .repo/local_manifests
+git clone https://github.com/Gtajisan/local_manifests_clo -b RisingOS .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -38,7 +38,7 @@ echo "======= Export Done ======"
 echo "====== Envsetup Done ======="
 
 # Lunch
-riseup Mi439_4_19 userdebug
+riseup mi439 userdebug
 echo "============="
 
 # Build rom
