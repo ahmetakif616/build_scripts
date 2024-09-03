@@ -9,7 +9,7 @@ echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/Gtajisan/local_manifests_clo -b RisingOS .repo/local_manifests
+git clone https://github.com/ahmetakif616/local_manifests_clo -b RisingOS .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
